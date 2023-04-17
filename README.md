@@ -8,7 +8,7 @@ It returns the energy conversion rate and visualises several flow fields.
 
 Details of the mathematical formulation and the numerical scheme are given in the paper:
 
-Ch. Papoutsellis, Matthieu Mercier, Nicolas Grisouard, Internal tide generation from non-uniform barotropic body forcing
+Ch. Papoutsellis, M. Mercier, N. Grisouard, Internal tide generation from non-uniform barotropic body forcing
 
 Any comments and questions are welcome!
 
