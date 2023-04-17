@@ -15,7 +15,7 @@
 % -------------------------------------------------- %%%
 
 function IT_CMS(epsilon,delta,M,s,varargin)
-% Syntax:  IT_CMS(epsilon,delta,M,s  ,plots,rh0,N,fc,omega,U00,h0,par,Nv)
+% Syntax:  IT_CMS(epsilon , delta , M , s ,   plots, rh0 , N , fc , omega , U00 , h0 , par , Nv , trunc)
 %
 % Calculation of the energy conversion rate for a Gaussian ridge and plot
 % of some fields
