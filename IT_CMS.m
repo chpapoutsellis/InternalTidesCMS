@@ -10,8 +10,8 @@
 % 
 % Author : Christos Papoutsellis 
 % E-mail : cpapoutsellis@gmail.com                
-% Web    : 
-% GitHub :                 
+% Web    : https://cpapoutsellis.wixsite.com/chpapoutsellis
+% GitHub : https://github.com/ChPapoutsellis                  
 % -------------------------------------------------- %%%
 
 function IT_CMS(epsilon,delta,M,s,varargin)
