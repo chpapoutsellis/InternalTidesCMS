@@ -39,8 +39,10 @@ function IT_CMS(epsilon,delta,M,s,varargin)
 %
 %
 % Examples:
+%    subcritical ridge
 %    IT_CMS(0.8, 0.5, 64, 6)
 %    IT_CMS(0.8, 0.5, 64, 6,'plots',1) (with visualisation)
+%    supercritical ridge
 %    IT_CMS(1.2, 0.5, 128, 12)
 %    IT_CMS(1.2, 0.5, 128, 12, 'plots',1) (with visualisation)
 %
