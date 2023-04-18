@@ -17,7 +17,7 @@ Any comments and questions are welcome!
 Running ITCMS in the Matlab command prompt window produces the IT corresponding to the M_2 tidal constituent with constant stratification N=0.0015 (1/s), Coriolis frequency f = 0.0001 (1/s) and horizontal barotropic current U_0 = 0.04 (m/s). The depth at infinity is 3000m and the ridge has a criticality 0.8 and relative height 0.5. The calculated energy conversion rate is 1577.26 (W/m) per unit ridge length. We show below typical figures produced by the code 
 ![alt text](https://github.com/ChPapoutsellis/InternalTidesCMSv1.0/blob/main/OUTPUT/psi.png?raw=true)
 ![alt text](https://github.com/ChPapoutsellis/InternalTidesCMSv1.0/blob/main/OUTPUT/u.png?raw=true)
-![](https://github.com/ChPapoutsellis/VIDEO.gif)
+![alt text](https://github.com/ChPapoutsellis/VIDEO.gif)
 
 # Acknowledgements
 For the colormaps we use the function cmocean.m (also provided here) written by Chad A. Greene of the Institute for Geophysics at the 
