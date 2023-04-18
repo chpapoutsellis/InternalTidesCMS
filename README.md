@@ -14,10 +14,11 @@ Any comments and questions are welcome!
 
 
 # Working Example
-Running ITCMS in the Matlab command prompt window produces the internal tide corresponding to the M_2 tidal constituent and a Gaussian ridge with characteristic depth of 3000m, criticality 0.8, relative height 0.5 with a Brunt–Väisälä frequency N=
+Running ITCMS in the Matlab command prompt window produces the internal tide corresponding to the M_2 tidal constituent and a Gaussian ridge with characteristic depth of 3000m, criticality 0.8, relative height 0.5 with a Brunt–Väisälä frequency N=0.0015 (1/s) and a Coriolis frequency fc = 0.0001 (1/s). Here are some figures produced 
 ![alt text](https://github.com/ChPapoutsellis/InternalTidesCMSv1.0/blob/main/OUTPUT/psi.png?raw=true)
+![alt text](https://github.com/ChPapoutsellis/InternalTidesCMSv1.0/blob/main/OUTPUT/u.png?raw=true)
 
-# Remarks
+# Acknowledgements
 For the colormaps we use the function cmocean.m (also provided here) written by Chad A. Greene of the Institute for Geophysics at the 
 University of Texas at Austin (UTIG), June 2016, using colormaps created by Kristen
 Thyng of Texas A&M University, Department of Oceanography.
