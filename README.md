@@ -15,7 +15,7 @@ Any comments and questions are welcome!
 
 # Working Example
 For an example with criticality 0.8 and relative height 0.5, write ITCMS in the Matlab command prompt window and press enter.
-![alt text](https://github.com/ChPapoutsellis/InternalTidesCMSv1.0/blob/main/OUTPUT?raw=true)
+![alt text](https://github.com/ChPapoutsellis/InternalTidesCMSv1.0/blob/main/OUTPUT/psi.png?raw=true)
 
 # Remarks
 For the colormaps we use the function cmocean.m (also provided here) written by Chad A. Greene of the Institute for Geophysics at the 
