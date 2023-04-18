@@ -14,7 +14,7 @@ Any comments and questions are welcome!
 
 
 # Working Example
-For an example with criticality 0.8 and relative height 0.5, write ITCMS in the Matlab command prompt window and press enter.
+Running ITCMS in the Matlab command prompt window produces the internal tide corresponding to the M_2 tidal constituent and a Gaussian ridge with characteristic depth of 3000m, criticality 0.8, relative height 0.5 with a Brunt–Väisälä frequency N=
 ![alt text](https://github.com/ChPapoutsellis/InternalTidesCMSv1.0/blob/main/OUTPUT/psi.png?raw=true)
 
 # Remarks
