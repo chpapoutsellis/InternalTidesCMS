@@ -14,8 +14,7 @@ Any comments and questions are welcome!
 
 
 # MWE
-For a minimum working example example calculating the internal tide generated 
-by a Gaussian ridge with criticality 0.8 and relative height 0.5, write ITCMS in the command
+For a minimum working example example corresponding to a Gaussian ridge with criticality 0.8 and relative height 0.5, write ITCMS in the command
 window and press enter.  
 
 
