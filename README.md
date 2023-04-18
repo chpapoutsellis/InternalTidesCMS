@@ -23,5 +23,5 @@ Thyng of Texas A&M University, Department of Oceanography.
 
 Thyng, K.M., C.A. Greene, R.D. Hetland, H.M. Zimmerle, and S.F. DiMarco. 2016. True 
 colors of oceanography: Guidelines for effective and accurate colormap selection. 
-Oceanography 29(3):9?13, http://dx.doi.org/10.5670/oceanog.2016.66.
+Oceanography 29(3):9-13, http://dx.doi.org/10.5670/oceanog.2016.66.
 
