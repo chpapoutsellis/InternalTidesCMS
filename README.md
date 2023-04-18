@@ -13,8 +13,8 @@ Ch. Papoutsellis, M. Mercier, N. Grisouard, Internal tide generation from non-un
 Any comments and questions are welcome!
 
 
-# MWE
-For a minimum working example example corresponding to a Gaussian ridge with criticality 0.8 and relative height 0.5, write ITCMS in the Matlab command prompt
+# Working Example
+For a working example example corresponding to a criticality 0.8 and relative height 0.5, write ITCMS in the Matlab command prompt
 window and press enter.  
 
 
