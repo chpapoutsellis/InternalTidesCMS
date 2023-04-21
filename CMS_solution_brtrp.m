@@ -1,3 +1,19 @@
+% Copyright or © or Copr. 
+% Authors: Christos Papoutsellis, Matthieu Mercier, Nicolas Grisouard
+% Initial version 2021, Current Version 2023
+% 
+% cpapoutsellis@gmail.com
+% matthieu.mercier@imft.fr
+% nicolas.grisouard@utoronto.ca
+% 
+% This software is a computer program whose purpose is to solve numerically a
+% a mathematical model describing the generation of internal tides.
+% 
+% This software is governed by the [CeCILL|CeCILL-B|CeCILL-C] license under
+% French law (see details in ITCMS.m)
+
+
+
 function [ph] = CMS_solution_brtrp( NT , x ,h,hx,hxx, hL , hR , mu0 ,h0,U0) 
 
 % Solution of the CMS with a 4th-order finite-difference method (non-hydrostatic barotropic case)

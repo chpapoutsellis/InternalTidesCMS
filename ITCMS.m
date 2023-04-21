@@ -1,3 +1,41 @@
+% Copyright or © or Copr. 
+% Authors: Christos Papoutsellis, Matthieu Mercier, Nicolas Grisouard
+% Initial version 2021, Current Version 2023
+% 
+% cpapoutsellis@gmail.com
+% matthieu.mercier@imft.fr
+% nicolas.grisouard@utoronto.ca
+% 
+% This software is a computer program whose purpose is to solve numerically a
+% a mathematical model describing the generation of internal tides.
+% 
+% This software is governed by the [CeCILL|CeCILL-B|CeCILL-C] license under French law and
+% abiding by the rules of distribution of free software.  You can  use, 
+% modify and/ or redistribute the software under the terms of the [CeCILL|CeCILL-B|CeCILL-C]
+% license as circulated by CEA, CNRS and INRIA at the following URL
+% "http://www.cecill.info". 
+% 
+% As a counterpart to the access to the source code and  rights to copy,
+% modify and redistribute granted by the license, users are provided only
+% with a limited warranty  and the software's author,  the holder of the
+% economic rights,  and the successive licensors  have only  limited
+% liability. 
+% 
+% In this respect, the user's attention is drawn to the risks associated
+% with loading,  using,  modifying and/or developing or reproducing the
+% software by the user in light of its specific status of free software,
+% that may mean  that it is complicated to manipulate,  and  that  also
+% therefore means  that it is reserved for developers  and  experienced
+% professionals having in-depth computer knowledge. Users are therefore
+% encouraged to load and test the software's suitability as regards their
+% requirements in conditions enabling the security of their systems and/or 
+% data to be ensured and,  more generally, to use and operate it in the 
+% same conditions as regards security. 
+% 
+% The fact that you are presently reading this means that you have had
+% knowledge of the [CeCILL|CeCILL-B|CeCILL-C] license and that you accept its terms.
+
+
 %*************************************************************************%
 %  Simulation of 2D Internal-Tides using the Couple-Mode System obtained  %
 %               from the body-forcing formulation                         %
@@ -10,7 +48,6 @@
 % 
 % Author : Christos Papoutsellis 
 % E-mail : cpapoutsellis@gmail.com                
-% Web    : https://cpapoutsellis.wixsite.com/chpapoutsellis
 % GitHub : https://github.com/ChPapoutsellis                
 
 
@@ -102,6 +139,8 @@ if omega<fc
 end
 %--------------------------------------------------------------------------
 
+
+
 % parameter mu
 mu     = sqrt(N^2-omega^2)/sqrt(omega^2-fc^2);
 
@@ -110,7 +149,7 @@ Lambda = delta*h0; % max height of the topography
 L = sqrt(1/exp(1))*Lambda*mu/epsilon;
 LM = 2*pi/(M*pi/(h0-Lambda)/mu); % wave length of the last mode over the summit
 dx = LM/s;              
-prefL = 0; % increase for a larger domain
+prefL = 0;
 xLL = -sqrt(2)*L*sqrt(log(Lambda/par)); xRR = -xLL;  
 hLL = Lambda.*exp(-xLL.^2./2/L^2); hRR = hLL;
 hL = h0-hLL;
@@ -271,10 +310,12 @@ if plots>0
     line(x,-0*h,'color','k')
     shading interp
     verm = ver('MATLAB');
-    if str2double(verm.Version) > 9.9
-        clim([-U00 U00])
-    else
+    % Check if MATLAB version is R2022a or later
+    if str2double(verm.Version) <= 9.12
+        % Code for MATLAB R2021a or later
         caxis([-U00 U00])
+    else
+        clim([-U00 U00])
     end
     colormap(cmocean('curl', 'pivot',0))
     colorbar
@@ -347,7 +388,7 @@ if plots>0
     title( '$W^{r}$ (m/s)','interpreter','latex','fontsize',fontsz);
 end
 if plots>1
-    figure('color','w','position',[371.4000  336.2000  810  393],'Name','Horizontal Velocity');
+    figure('color','w','position',[371.4000  336.2000  800  400],'Name','Horizontal Velocity');
     box on
     hv = pcolor(XX,ZZ,u);
     hold on
@@ -358,15 +399,16 @@ if plots>1
     ylabel('$z$ (m)','interpreter','latex','fontsize',fontsz)
     xlabel('$x$ (m)','interpreter','latex','fontsize',fontsz)
     title( '$u^{\#}$ (m/s)','interpreter','latex','fontsize',fontsz);
-    ax = gca();
     verm = ver('MATLAB');
-    if str2double(verm.Version) > 9.9
-        clim([-U00 U00])
-    else
+    % Check if MATLAB version is R2022a or later
+    if str2double(verm.Version) <= 9.12
+        % Code for MATLAB R2021a or later
         caxis([-U00 U00])
+    else
+        clim([-U00 U00])
     end
     colormap(cmocean('curl', 'pivot',0))
-    avi_col = VideoWriter('OUTPUT/VIDEO.avi','Motion JPEG AVI');
+    avi_col = VideoWriter('OUTPUT/VIDEO.mp4','MPEG-4');
     avi_col.Quality = 100;
     time = 0:T/40:4*T;
     avi_col.FrameRate = round(length(time)/30);
@@ -380,8 +422,8 @@ if plots>1
         u   = ud   - Ur;
         %w   = wd   - Wr;
         set(hv,'Cdata',u)
-        drawnow;
-        frame = getframe(ax);
+        drawnow
+        frame = getframe(gcf);
         writeVideo(avi_col,frame);
 
     end

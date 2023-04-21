@@ -1,5 +1,21 @@
+% Copyright or © or Copr. 
+% Authors: Christos Papoutsellis, Matthieu Mercier, Nicolas Grisouard
+% Initial version 2021, Current Version 2023
+% 
+% cpapoutsellis@gmail.com
+% matthieu.mercier@imft.fr
+% nicolas.grisouard@utoronto.ca
+% 
+% This software is a computer program whose purpose is to solve numerically a
+% a mathematical model describing the generation of internal tides.
+% 
+% This software is governed by the [CeCILL|CeCILL-B|CeCILL-C] license under
+% French law (see details in ITCMS.m)
+
+
+
 function f = gradientp(y,dx)
-%%  numerical differentiation of a scalar function with 4th order finite differences
+%%  numerical differentiation of a scalar function with 4th-order finite differences
 N = length(y);
 f = zeros(size(y));
 % one-sided 
