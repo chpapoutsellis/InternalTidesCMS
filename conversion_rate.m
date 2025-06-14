@@ -38,7 +38,7 @@ for i = 1:Nx
     I1(i) = -2*(-1).^nn./nn/pi * hx(i)^2/h(i)*imag(ph(1:Nmm,i))*Q;
     I2(i) =  - (-1).^nn./nn/pi * hx(i)*imag(phx(1:Nmm,i))*Q;
 end
-Cint = N^2/2/omega*(1-omega^2/N^2)*rho*trapz(x(xLi:xRi),I1(xLi:xRi)+I2(xLi:xRi));
+Cint = -N^2/2/omega*(1-omega^2/N^2)*rho*trapz(x(xLi:xRi),I1(xLi:xRi)+I2(xLi:xRi));
 
 
 

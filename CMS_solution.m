@@ -96,7 +96,7 @@ for m = 1:Nm
         Ass = squeeze(As(m,n,:));
         Bss = squeeze(Bs(m,n,:));
         Css = squeeze(Cs(m,n,:));
-        J( 1 ) = 1 ; K( 1 ) = 1 ; X( 1 ) = (-25/12/dx + sqrt(-1)*n*pi/hL/mu)*Ind;
+        J( 1 ) = 1 ; K( 1 ) = 1 ; X( 1 ) = (-25/12/dx - sqrt(-1)*n*pi/hL/mu)*Ind;
         J( 2 ) = 2 ; K( 2 ) = 1 ; X( 2 ) = 5/6*Ass(2)/dx/dx - 1/4*Bss(2)/dx ;
         J( 3 ) = 3 ; K( 3 ) = 1 ; X( 3 ) = -Ass(3)/dx/(dx*12) + Bss(3)/12/dx;
          
@@ -182,7 +182,7 @@ for m = 1:Nm
          
         J( end-2 ) = Nx-2;   K( end-2 ) = Nx;  X( end-2 ) = -Ass(Nx-2)/dx/(dx*12) - Bss(Nx-2)/12/dx  ;  
         J( end-1 ) = Nx-1;   K( end-1 ) = Nx;  X( end-1 ) = 5/6*Ass(Nx-1)/dx/dx + 1/4*Bss(Nx-1)/dx ;
-        J( end ) = Nx;       K( end )   = Nx;  X( end ) = (25/12/dx - sqrt(-1)*(n*pi/hR/mu))*Ind;
+        J( end ) = Nx;       K( end )   = Nx;  X( end ) = (25/12/dx + sqrt(-1)*(n*pi/hR/mu))*Ind;
         
         JJ( (pos-1)*NZ + 1 : pos*NZ ) = J +(m-1)*Nx ; 
         KK( (pos-1)*NZ + 1 : pos*NZ ) = K +(n-1)*Nx ;
